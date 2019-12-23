@@ -20,13 +20,15 @@ import reactive.politics.tv.handler.PoliticsUserDataHandler;
 
 @Configuration
 public class PoliticsUserDataRouter {
-	
-	@Bean
-	public RouterFunction<ServerResponse> politicsUserDataListAll(PoliticsUserDataHandler politicsUserDataHandler) {
-		
-		return RouterFunctions.route(RequestPredicates.GET("/users/")
-				.and(RequestPredicates.accept(MediaType.APPLICATION_JSON)), politicsUserDataHandler::readPoliticsUserData);
 
-	}
+  @Bean
+  public RouterFunction<ServerResponse> politicsUserDataListAll(
+      PoliticsUserDataHandler politicsUserDataHandler) {
+
+    return RouterFunctions.route(
+        RequestPredicates.GET("/users/").and(RequestPredicates.accept(MediaType.APPLICATION_JSON)),
+        politicsUserDataHandler::readPoliticsUserData);
+
+  }
 
 }

@@ -16,16 +16,14 @@ import reactor.core.publisher.Mono;
  *
  */
 public class PoliticsUserDataWebClient {
-	
-	private WebClient client = WebClient.create("http://localhost:8080");
 
-	private Mono<ClientResponse> result = client.get()
-			.uri("/users/")
-			.accept(MediaType.TEXT_PLAIN)
-			.exchange();
+  private WebClient client = WebClient.create("http://localhost:8080");
 
-	public String getResult() {
-		return ">> result = " + result.flatMap(res -> res.bodyToMono(String.class)).block();
-	}
+  private Mono<ClientResponse> result =
+      client.get().uri("/users/").accept(MediaType.TEXT_PLAIN).exchange();
+
+  public String getResult() {
+    return ">> result = " + result.flatMap(res -> res.bodyToMono(String.class)).block();
+  }
 
 }

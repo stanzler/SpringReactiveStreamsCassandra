@@ -17,26 +17,26 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table
 public class PoliticsUser {
-	
-	@Id 
-	private Long id;
-	public String firstname;
-	public String lastname;
-	public String email;
-	
-	public void set_first_name(String fn) {
-		
-		firstname = fn;
-	}
-	
-	public void set_last_name(String ln) {
-		
-		lastname = ln;
-	}
-	
-	public void set_email(String e) {
-		
-		email = e;
-	}
+
+  @Id
+  private Long id;
+  public String firstname;
+  public String lastname;
+  public String email;
+
+  public void set_first_name(String fn) {
+
+    firstname = fn;
+  }
+
+  public void set_last_name(String ln) {
+
+    lastname = ln;
+  }
+
+  public void set_email(String e) {
+
+    email = e;
+  }
 
 }

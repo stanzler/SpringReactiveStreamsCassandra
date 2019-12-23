@@ -13,16 +13,16 @@ import reactor.core.publisher.Mono;
  *
  */
 public interface PoliticsUserDataRespository extends ReactiveCrudRepository<PoliticsUser, Long> {
-	
-	//read
-	Flux<PoliticsUser> findAll();
-	
-	//Mono<User> findById(ID id);
-	
-	Mono<Void> delete(PoliticsUser user);
-	
-	Mono<Long> count();
-	
-	Mono<PoliticsUser> save(PoliticsUser user);
-	
+
+  // read
+  Flux<PoliticsUser> findAll();
+
+  // Mono<User> findById(ID id);
+
+  Mono<Void> delete(PoliticsUser user);
+
+  Mono<Long> count();
+
+  Mono<PoliticsUser> save(PoliticsUser user);
+
 }

@@ -8,11 +8,11 @@ import reactive.politics.tv.webclient.PoliticsUserDataWebClient;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-		
-	PoliticsUserDataWebClient pdwc = new PoliticsUserDataWebClient();
-	System.out.println(pdwc.getResult());
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+
+    PoliticsUserDataWebClient pdwc = new PoliticsUserDataWebClient();
+    System.out.println(pdwc.getResult());
+  }
 
 }
